@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="clickMe()">Нажми меня</button>
+<p id="id"></p>
+<script>
+function longestWords(str1) {
+  str = str1.replace(/[.,#!$%^&*;:{}=\-_`/~()]/g,'')
+  var longestWord = str.split(' ').sort(function(a, b) { return b.length - a.length; });
+  return longestWord[0] + '; ' + longestWord[1] + '; ' + longestWord[2];
+}
+function clickMe() {
+  var txt;
+  var text = prompt("Введите текст:");
+  if (text == null || text == "") {
+    text = prompt("Введите текст:");
+  } else {
+    txt = text ;
+  }
+  alert(longestWords(txt));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>task 3</title>
+</head>    
+<body>
+   <script>
+       let surName = prompt('Фамилия: ');
+       let name = prompt('Имя: ');
+       let fatherName = prompt('Отчество: ');
+       let age = prompt('Возраст: ');
+       let sex = confirm("ваш пол - мужской?");
+       let ageDays = age*365;
+       let gender =  sex ? 'мужской' : 'женский';
+       let retAge = (age>=60&&sex===true||age>=55&&sex===false) ? 'да': 'нет' ;
+alert(`ФИО: ${surName} ${name} ${fatherName}
+возраст, лет: ${age}
+возраст, дней: ${ageDays}
+пол: ${gender}
+пенсионный возраст: ${retAge}`);
+   </script>    
+</body>
+</html>
